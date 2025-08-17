@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SyncButton matches snapshot 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "borderColor": "#3498DB",
+      "borderRadius": 8,
+      "borderWidth": 1,
+      "elevation": 2,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 16,
+      "paddingVertical": 12,
+      "shadowColor": "#000",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.1,
+      "shadowRadius": 4,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        undefined,
+        {
+          "color": "#3498DB",
+          "fontSize": 25,
+        },
+      ]
+    }
+    testID="mock-icon"
+  >
+    sync
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontFamily": "System",
+        },
+        {
+          "fontSize": 16,
+          "lineHeight": 24,
+        },
+        {
+          "color": "#000000",
+        },
+        {
+          "fontSize": 16,
+        },
+        {
+          "fontWeight": "normal",
+        },
+        [
+          {
+            "color": "#3498DB",
+            "fontSize": 16,
+            "fontWeight": "600",
+            "marginLeft": 8,
+          },
+          false,
+          undefined,
+        ],
+      ]
+    }
+  >
+    Sync
+  </Text>
+</View>
+`;

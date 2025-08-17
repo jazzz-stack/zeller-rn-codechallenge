@@ -1,72 +1,201 @@
-# Zeller React Native Code Challenge
+# Zeller RN Code Challenge – Client App
 
-## 1. Objective  
-Build a **React Native application** that displays, filters, and manages a list of users.  
-The app should integrate with the provided **GraphQL API** and persist data in a **local database** for offline usage.  
+This is a React Native application for the Zeller code challenge.
 
-We will evaluate your submission based on:  
-- **Code structure and maintainability**  
-- **TypeScript usage**  
-- **Testing approach and coverage**  
+## Project Overview
+
+This app demonstrates user management with local database persistence (no API mutation required). Users can be added and are stored locally using Realm.
 
 ---
 
-## 2. Requirements  
+## Prerequisites
 
-### **Data Integration**
-- Fetch user data using the `listZellerCustomers` GraphQL query.  
-  *(Schema and connection details are provided in `aws-exports.js` and `schema.gql`.)*  
-- Store the fetched data in a local database such as **SQLite**, **WatermelonDB**, **Realm**, or similar.  
-- Display the list of users from the **local database**, not directly from the network.  
-
-### **User Management**
-- Add new users and save them to the local database. *(No API mutation is required.)*  
-- Update and delete users from the local database.  
-
-### **Filtering & Searching**
-- Filter users by **user type** (`Admin`, `Manager`).  
-- Implement a text search to filter users by **name**.  
-
-### **UI & Interaction**
-- Implement **pull-to-refresh** on the user list.  
-- Ensure the app runs on **iOS** and **Android**.  
-
-### **Code Quality & Testing**
-- Write **unit and/or integration tests** for critical parts of the application.  
-- Follow **clean, readable, and consistent** coding practices.  
+- **Node.js** (v16 or later recommended)
+- **Yarn** (recommended) or npm
+- **React Native CLI**
+- **Xcode** (for iOS)
+- **Android Studio** (for Android)
+- **CocoaPods** (for iOS, run `sudo gem install cocoapods` if not installed)
 
 ---
 
-## 3. Design References  
+## Project Structure
 
-**List Screen**  
+```
+zeller-rn-codechallenge/           # Monorepo root
+│
+├── client-app/                    # Main React Native application
+│   ├── src/                       # App source code (components, screens, logic)
+│   ├── ios/                       # iOS native project files
+│   ├── android/                   # Android native project files
+│   └── ...                        # Other client app files (configs, assets, etc.)
+│
+├── mock-server/                   # Mock API server for development/testing
+│   ├── queries/                   # GraphQL query files
+│   ├── schema.gql                 # GraphQL schema
+│   └── ...                        # Server code and configs
+│
+├── README.md                      # Monorepo documentation
+└── ...                            # Other root-level files
+```
 
-![Zeller Customers List](zeller-customers-design.png)  
 
-**Create User Form**  
+## App Setup Instructions
 
-![Add User Screen](zeller-add-user.png)  
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/jazzz-stack/zeller-rn-codechallenge.git
+   ```
 
----
-
-## 4. Notes  
-- You may use any state management solution (e.g., Redux, Zustand, Jotai, or Context API).  
-- Keep the codebase modular and well-documented so it’s easy to review.  
-- Aim for a production-quality implementation, even though this is a challenge.  
-- Feel free to enhance the **user experience** with **smooth interactions** or **transitions** where appropriate.
-
----
-
-## 5. Submission Guidelines  
-
-1. Ensure your project includes:  
-   - A clear **README** with setup and run instructions.  
-   - Any necessary environment files or example configs (e.g., `.env.example`).  
-   - **Tests** and instructions on how to run them.  
-2. Make sure your code runs without errors on a clean install using:  
-   ```bash
+2. **Install and start the mock server:**
+   ```sh
+   cd zeller-rn-codechallenge/mock-server
    yarn install
-   yarn ios   # or yarn android
-   ```  
-3. Once complete, **share the repository link** (or a zipped copy of your repo) with us.  
-4. Do **not** include any dependencies or files that are not required for this project.  
+   yarn start
+   ```
+
+3. **Navigate to the client app directory:**
+   ```sh
+   cd ../client-app
+   ```
+
+4. **Install dependencies:**
+   ```sh
+   yarn install
+   ```
+
+5. **Install iOS dependencies (Mac only):**
+   ```sh
+   cd ios && pod install && cd ..
+   ```
+
+---
+
+## Running the App
+
+### iOS
+
+```sh
+yarn ios
+```
+
+### Android
+
+Make sure an Android emulator is running or a device is connected.
+
+```sh
+yarn android
+```
+
+---
+
+## Start mock-server
+
+Make sure you are running the mock-server if not please follow the steps below.
+
+---
+
+4. **Navigate to mock-server root:**
+   ```sh
+   zeller-rn-codechallenge > mock-server
+   ```
+
+4. **Install dependencies:**
+   ```sh
+   yarn install
+   ```
+
+4. **Start server:**
+   ```sh
+   yarn start
+   ```
+
+---
+
+## Local Database
+
+- The app uses **Realm** for local data storage.
+- All new users are saved locally and persist across app reloads.
+- No API mutation is performed when adding users.
+
+---
+
+## Running Tests
+
+To run tests and check coverage for the client app, use the following commands from the `client-app` directory:
+
+- **Run all tests:**  
+  ```sh
+  yarn test
+  ```
+
+- **Check total test coverage:**  
+  ```sh
+  yarn test:coverage
+  ```
+
+- **Generate a detailed coverage report (output in the `coverage` directory):**  
+  ```sh
+  yarn test:coverage:report
+  ```
+
+- **Check coverage for a specific file or component:**  
+  ```sh
+  yarn test:coverage:file <ComponentName>
+  ```
+
+- **Run tests for a specific file or component:**  
+  ```sh
+  yarn test <ComponentName>
+  ```
+
+**Examples:**
+```sh
+yarn test:coverage                 # Verify total coverage
+yarn test:coverage:report          # Generate coverage report in 'coverage' directory
+yarn test:coverage:file HomeScreen # Check coverage for files matching 'HomeScreen'
+yarn test HomeScreen               # Run tests for files matching
+
+## Troubleshooting
+
+- If you encounter issues with dependencies, try:
+  ```sh
+  yarn install
+  cd ios && pod install && cd ..
+  ```
+- For Metro bundler issues, run:
+  ```sh
+  yarn start --reset-cache
+  ```
+
+---
+
+## Contact
+
+For questions or issues, please open an issue on the [GitHub repository](https://github.com/jazzz-stack/zeller-rn-codechallenge.git) or contact the maintainer at [jaswant.raj45@gmail.com](mailto:jaswant.raj45@gmail.com).
+
+---
+## App Preview
+
+Below are screenshots of the app in action:
+- Each image represents a different screen or feature of the app.
+<p align="center">
+  <img src="client-app/assets/images/one.png" alt="App Preview 1" width="250" />
+  <img src="client-app/assets/images/two.png" alt="App Preview 2" width="250" />
+  <img src="client-app/assets/images/three.png" alt="App Preview 3" width="250" />
+  <img src="client-app/assets/images/four.png" alt="App Preview 4" width="250" />
+  <img src="client-app/assets/images/five.png" alt="App Preview 5" width="250" />
+  <img src="client-app/assets/images/six.png" alt="App Preview 6" width="250" />
+</p>
+
+---
+## Unit test with 100% of coverage
+
+Below are screenshots of the client-app unit test coverage:
+
+<p align="center">
+ <img src="client-app/assets/images/ut-one.png" alt="App Preview 1" width="250" />
+ <img src="client-app/assets/images/ut-two.png" alt="App Preview 1" width="250" />
+</p>
+
+

@@ -1,29 +1,125 @@
 export const listZellerCustomers = {
-    items: [
-        {
-            id: '1',
-            name: 'TestCustomer1',
-            email: 'test1@test.com',
-            role: 'Manager'
-        },
-        {
-            id: '2',
-            name: 'TestCustomer2',
-            email: 'test2@test.com',
-            role: 'Admin'
-        },
-        {
-            id: '3',
-            name: 'TestCustomer3',
-            email: 'test3@test.com',
-            role: 'Manager'
-        },
-        {
-            id: '4',
-            name: 'TestCustomer4',
-            email: 'test4@test.com',
-            role: 'Admin'
-        }
-    ],
-    nextToken: null
+  items: [
+    {
+      id: "1",
+      name: "Barbara Streider",
+      email: "barbarastreider@test.com",
+      role: "Manager",
+    },
+    {
+      id: "2",
+      name: "Brad Herman",
+      email: "bradherman@test.com",
+      role: "Admin",
+    },
+    {
+      id: "3",
+      name: "Camille Cummeratal",
+      email: "camillecummeratal@test.com",
+      role: "Manager",
+    },
+    {
+      id: "4",
+      name: "Cecil Boyle IV",
+      email: "cecilboyleiv@test.com",
+      role: "Admin",
+    },
+    {
+      id: "5",
+      name: "Debra Pfeffer",
+      email: "debrapfeffer@test.com",
+      role: "Admin",
+    },
+    {
+      id: "6",
+      name: "Flora Hagenes",
+      email: "florahagenes@test.com",
+      role: "Manager",
+    },
+    {
+      id: "7",
+      name: "Harley Peppers",
+      email: "harleypeppers@test.com",
+      role: "Admin",
+    },
+    {
+      id: "8",
+      name: "Harvey Norman",
+      email: "harveynorman@test.com",
+      role: "Manager",
+    },
+    {
+      id: "9",
+      name: "Barbara Streider",
+      email: "barbarastreider@test.com",
+      role: "Manager",
+    },
+    {
+      id: "10",
+      name: "Brad Herman",
+      email: "bradherman@test.com",
+      role: "Admin",
+    },
+    {
+      id: "11",
+      name: "Camille Cummeratal",
+      email: "camillecummeratal@test.com",
+      role: "Manager",
+    },
+    {
+      id: "12",
+      name: "Cecil Boyle IV",
+      email: "cecilboyleiv@test.com",
+      role: "Admin",
+    },
+    {
+      id: "13",
+      name: "Debra Pfeffer",
+      email: "debrapfeffer@test.com",
+      role: "Admin",
+    },
+    {
+      id: "14",
+      name: "Flora Hagenes",
+      email: "florahagenes@test.com",
+      role: "Manager",
+    },
+    {
+      id: "15",
+      name: "Harley Peppers",
+      email: "harleypeppers@test.com",
+      role: "Admin",
+    },
+    {
+      id: "16",
+      name: "Harvey Norman",
+      email: "harveynorman@test.com",
+      role: "Manager",
+    },
+    {
+      id: "17",
+      name: "Flora Hagenes",
+      email: "florahagenes@test.com",
+      role: "Manager",
+    },
+    {
+      id: "18",
+      name: "Harley Peppers",
+      email: "harleypeppers@test.com",
+      role: "Admin",
+    },
+    {
+      id: "19",
+      name: "Harvey Norman",
+      email: "harveynorman@test.com",
+      role: "Manager",
+    },
+    {
+      id: "20",
+      name: "Harvey Norman",
+      email: "harveynorman@test.com",
+      role: "Manager",
+    },
+  ],
+  nextToken: null,
 };

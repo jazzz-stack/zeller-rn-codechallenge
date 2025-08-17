@@ -1,0 +1,112 @@
+import {StyleSheet} from 'react-native';
+
+export const styles = StyleSheet.create({
+  errorContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 24,
+    backgroundColor: '#f8f9fa',
+  },
+  errorContent: {
+    alignItems: 'center',
+    maxWidth: 320,
+    width: '100%',
+  },
+  iconContainer: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 24,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 4,
+  },
+  errorIcon: {
+    textAlign: 'center',
+  },
+  errorTitle: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: '#2c3e50',
+    textAlign: 'center',
+    marginBottom: 12,
+    letterSpacing: -0.5,
+  },
+  errorMessage: {
+    fontSize: 16,
+    color: '#64748b',
+    textAlign: 'center',
+    lineHeight: 24,
+    marginBottom: 32,
+    paddingHorizontal: 16,
+  },
+  actionContainer: {
+    width: '100%',
+    alignItems: 'center',
+  },
+  retryButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#3b82f6',
+    paddingHorizontal: 32,
+    paddingVertical: 16,
+    borderRadius: 12,
+    minWidth: 160,
+    shadowColor: '#3b82f6',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  retryButtonIcon: {
+    marginRight: 8,
+  },
+  retryButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#fff',
+    letterSpacing: 0.5,
+  },
+  helperText: {
+    fontSize: 14,
+    color: '#94a3b8',
+    textAlign: 'center',
+    marginTop: 24,
+    fontStyle: 'italic',
+  },
+  // Legacy styles (keeping for backward compatibility)
+  errorText: {
+    fontSize: 16,
+    textAlign: 'center',
+    color: '#FF3B30',
+    marginBottom: 16,
+  },
+  syncButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: '#ECF0F1',
+    borderRadius: 5,
+  },
+  syncButtonText: {
+    marginLeft: 10,
+    color: '#3498DB',
+    fontSize: 16,
+    fontWeight: '500',
+  },
+});
