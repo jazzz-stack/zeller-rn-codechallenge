@@ -189,13 +189,12 @@ Below are screenshots of the app in action:
 </p>
 
 ---
-## Unit test with 100% of coverage
+## Unit test coverage
 
 Below are screenshots of the client-app unit test coverage:
 
 <p align="center">
  <img src="client-app/assets/images/ut-one.png" alt="App Preview 1" width="250" />
- <img src="client-app/assets/images/ut-two.png" alt="App Preview 1" width="250" />
 </p>
 
 
